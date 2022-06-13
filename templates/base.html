@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      PizzaNossa! - 
+      {% block titulo %}
+      {% endblock %}
+    </title>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Página Inicial</a> |
+      <a href="/cardapio">Cardápio</a> |
+      Avaliações |
+      Fale conosco | Login
+    </nav>
+
+    <main>
+      {% block conteudo %}
+      {% endblock %}
+    </main>
+
+    <footer>
+      <h5>Desenvolvido por: Alba Lopes</h5>
+    </footer>
+  </body>  
+</html>
