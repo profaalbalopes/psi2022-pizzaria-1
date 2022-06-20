@@ -5,11 +5,19 @@ Cardápio
 {% endblock %}
 
 {% block conteudo %}
-<!--
-<ul>
-  <li>Frango com Catupiry - P: R$ 40,00 M: 50,00 G: 60,00</li>
-  <li>Sertaneja - P: R$ 45,00 M: 55,00 G: 65,00</li>
-</ul>-->
+
+  {% if promocao == True %}
+    <img src="/static/promocao.webp"/>
+    {% if porcentagem <= 10 %}
+        <h3 style="color: yellow"> {{porcentagem}}% de desconto</h3>
+    {% elif porcentagem > 10 and porcentagem <=20 %}
+       <h3 style="color: blue"> {{porcentagem}}% de desconto</h3>
+    {% elif porcentagem > 20 and porcentagem <=50 %}
+       <h3 style="color: green"> {{porcentagem}}% de desconto</h3>
+    {% else %}
+        <h3 style="color: pink"> {{porcentagem}}% de desconto</h3>
+    {% endif %}
+  {% endif %}
 
 <div class="card" style="width: 18rem;">
   <img src="/static/frango-catupiry.webp" class="card-img-top" alt="...">
