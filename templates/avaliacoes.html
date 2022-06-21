@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block titulo %} Avaliações {% endblock %}
+{% block conteudo %}
+  <ul>
+    {% for a in clientes %}
+      <li>
+        Avaliacao de {{a.nome}} - Nota: 
+        {% for e in range(a.nota) %}
+          <!--<span style="color: yellow">*</span>-->
+          <img src="/static/estrela.png" width="20px" height="20px">
+        {% endfor %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
